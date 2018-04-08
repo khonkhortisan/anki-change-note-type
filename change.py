@@ -12,8 +12,8 @@ Note however that the number of leech, the easyness, the date of next review, et
 
 Update 2018-01-10: The creation date of note is preserved as much as possible (the date is incremented of a few miliseconds). The creation date of card is not preserved.
 """
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt5.QtCore import *
+from PyQt5.QtGui import *
 from anki.hooks import addHook
 from aqt import mw
 from aqt.utils import tooltip
@@ -68,7 +68,7 @@ def copyCards(nids):
     
     # Copy notes
     for nid in nids:
-        print "Found note: %s" % (nid)
+        print( "Found note: %s" % (nid))
         note = mw.col.getNote(nid)
         model = note._model
         
